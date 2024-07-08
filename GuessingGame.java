@@ -11,7 +11,7 @@ public class GuessingGame {
         String playAgain;
 
         do {
-            int num = random.nextInt(100) + 1; // Generate random number (1-100)
+            int num = random.nextInt(100) + 1; 
             boolean correct = false;
 
             for (int i = 1; i <= maxAttempts; i++) {
@@ -34,12 +34,12 @@ public class GuessingGame {
                 System.out.println("Out of attempts. Number was: " + num);
             }
 
-            do { // Validate play again input (y/n)
+            do { 
                 System.out.print("Play again? (y/n): ");
-                playAgain = scanner.next().toLowerCase(); // Convert to lowercase for case-insensitive check
+                playAgain = scanner.next().toLowerCase(); 
             } while (!playAgain.equals("y") && !playAgain.equals("n"));
 
-        } while (playAgain.equals("y")); // Continue if user enters "y"
+        } while (playAgain.equals("y")); 
 
         System.out.println("Thanks for playing! Your score is: " + score);
         scanner.close();
